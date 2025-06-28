@@ -1,0 +1,39 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/icon128.png",
+         "16": "icons/icon16.png",
+         "48": "icons/icon48.png"
+      },
+      "default_popup": "popup.html"
+   },
+   "background": {
+      "service_worker": "background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "modules/i18n-manager.js", "modules/unified-database-manager.js", "modules/template-selector.js", "modules/github-downloader.js", "modules/template-workflow-helper.js", "modules/code-copy-handler.js", "modules/output-manager.js", "modules/testStepMonitor.js", "modules/n8n-api-client.js", "modules/node-copy-manager.js", "modules/local-projects-manager.js", "modules/local-variables-manager.js", "modules/dialog-manager.js", "modules/node-context-analyzer.js", "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "default_locale": "en",
+   "description": "__MSG_appDescription__",
+   "host_permissions": [ "https://*.n8n.cloud/*", "https://api.openai.com/*", "https://api.anthropic.com/*", "https://openrouter.ai/*", "https://consoleai.org/*", "https://*/*", "http://*/*" ],
+   "icons": {
+      "128": "icons/icon128.png",
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwWypgNvSmLHQvehofMX/Th7mrJhW/gbAGaQdgiuKqKj7QqPrBrOKii5uTdkf+JB1Rr0mZN5RchL7fc/H2M5gjGeyAxb9eZhFb+gQEbpiBnsosJvdHg9Py2z+VmABpzBt59KJDclQRrgpR01My3VLWN8NqixZtLJiTjG1YUGlBTNbvna4oIqLLFmdpPn0m+YtgCdjN3XsJtWNzMXSpN637thQQIcN2xmsaxPZBZCazsROP+sgXnn4Q4jP7FjEl2UH5b5KE0kyAS/yWs3QjV952I4ipM+lIjtZmcWZvcacKihvQm61rDQFV2hf9+fMOD/vYhaZFqUCvoc3To5IUoKlKQIDAQAB",
+   "manifest_version": 3,
+   "name": "__MSG_appName__",
+   "options_ui": {
+      "open_in_tab": true,
+      "page": "options/options.html"
+   },
+   "permissions": [ "storage", "activeTab", "contextMenus", "scripting", "alarms", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.0.0",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "icons/*", "awesome-n8n-templates.json", "images/*", "welcome.html", "welcome.css", "welcome.js", "_locales/*/messages.json", "modules/i18n-manager.js" ]
+   } ]
+}
